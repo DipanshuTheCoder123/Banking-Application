@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <style>
+        .bg-section {
+            background-image: url('https://resources.jetbrains.com/storage/products/v/beams/jb-academy/v1.svg');
+            /* 🔹 put your image here */
+            background-size: cover;
+            /* make image cover whole div */
+            background-position: center;
+            /* center the image */
+            background-repeat: no-repeat;
+            height: 100vh;
+            /* full screen height */
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+
+    <header>
+        <nav class="navbar navbar-expand-lg bg-black">
+            <div class="container">
+                <img src="https://resources.jetbrains.com/assets/logos/jetbrains-square.svg" alt="" srcset="">
+                <a class="navbar-brand text-white ms-3 fs-3 " href="index.html">Smart Programing</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" aria-current="page" href="#">My Enrolment</a>
+                        </li>
+
+                    </ul>
+
+                    <ul class="navbar-nav ms-3 mb-1 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" aria-current="page" href="#"><span
+                                    style="font-size: 1.7rem;"><i
+                                        class="fa-solid fa-circle-user"></i></span>Hello,Dipanshu</a>
+                        </li>
+                        <li class="nav-item ms-1 ">
+                            <a class="btn btn-danger nav-link active text-white mt-2" href="/logout">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <main style="min-height: 690px;">
+
+        <div class="min-vw-600vh">
+
+            <div class="container my-4">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body shadow text-center">
+                                <i class="fa-solid fa-circle-user text-center" style="font-size: 8rem;"></i>
+                                <h3>dipanshu</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <div class="card-body shadow ">
+                            <h3 class=" text-center">Use Details</h3>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Name</th>
+                                        <td th:text="${session_user.name}"></td>
+
+
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <th scope="col">email</th>
+                                        <td th:text="${session_user.email}"></td>
+
+
+
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <th scope="col">passwod</th>
+                                        <td th:text="${session_user.password}"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <th scope="col">phono</th>
+                                        <td th:text="${session_user.phono}"> </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">4</th>
+                                        <th scope="col">city</th>
+                                        <td th:text="${session_user.city}"> </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+
+
+    <footer>
+        <div class="bg-black text-white text-center">
+            <span>@dipaonshu copywrite</span>
+            <div>
+                <a href="" class="text-decoration-none">gbf</a>
+                <a href="" class="text-decoration-none">fdbsb</a>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
